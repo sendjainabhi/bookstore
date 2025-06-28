@@ -9,7 +9,8 @@ public class Book {
 
     @Id
     @GeneratedValue
-    private Long id;
+    private int id;
+
     private String name;
     private String author;
 
@@ -29,7 +30,7 @@ public class Book {
         this.name = name;
     }
 
-    public Long getId() {
+    public int getId() {
 
         return id;
     }
@@ -38,7 +39,7 @@ public class Book {
         return name;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

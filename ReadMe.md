@@ -44,9 +44,21 @@ cd bookstore
 
 This application uses Spring Profiles to manage database-specific configurations. You will need to provide your database credentials in the appropriate properties file located in `src/main/resources/`.
 
-You can create two separate files for each database profile.
+**MSSQL DB would require to create following Schema before app deployment**
+ 
+ ```
+Table : Book , Columns  - id (BigInt) , name (Varchar) , author (Varchar). 
+Table : Employee , Columns  - id (BigInt) , name (Varchar) , role (Varchar).
+```
 
+**PostGres DB would require to create following Schema before app deployment**
 
+```
+Table : Book , Columns  - id (BigInt) , name (text) , author (text). 
+Table : Employee , Columns  - id (BigInt) , name (text) , role (text).
+Sequence for Primary key generating :  emp_seq , book_seq.
+
+```
 
 **File: `src/main/resources/application.properties`**
 ```properties
